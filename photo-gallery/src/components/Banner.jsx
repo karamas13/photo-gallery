@@ -1,22 +1,25 @@
 import React from 'react';
 import './styles.css'; 
+import { useNavigate } from 'react-router';
 
 const Banner = () => {
+    const nav = useNavigate();
+
     const images = [
-        '/images/dragon_1.jpg',
-        '/images/dragon_2.jpg',
-        '/images/dragon_3.jpg',
-        '/images/dragon_4.jpg',
-        '/images/dragon_5.jpg',
-        '/images/dragon_6.jpg',
-        '/images/dragon_7.jpg',
-        '/images/dragon_8.jpg',
-        '/images/dragon_9.jpg',
-        '/images/dragon_10.jpg',
+        '/images/dragon_1.png',
+        '/images/dragon_ 2.png',
+        '/images/dragon_ 3.png',
+        '/images/dragon_ 4.png',
+        '/images/dragon_ 5.png',
+        '/images/dragon_ 6.png',
+        '/images/dragon_ 7.png',
+        '/images/dragon_ 8.png',
+        '/images/dragon_ 9.png',
+        '/images/dragon_ 10.png',
     ];
 
     return (
-        <div className="banner relative w-full h-screen text-center overflow-hidden  bg-cover bg-center">
+        <div className="banner relative w-full h-screen text-center overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-50 via-stone-900 to-stone-950 bg-cover bg-center">
             <div
                 className="slider absolute top-10 left-1/2 transform -translate-x-1/2"
                 style={{ '--quantity': images.length }}
@@ -38,7 +41,7 @@ const Banner = () => {
 
             {/* Responsive button */}
                <div className="w-screen h-screen flex items-end justify-center ">
-               <button class="mb-20 text-2xl rounded-lg text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border border-red-500 bg-white px-3 text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full"><span class="relative z-10">View-Gallery</span></button>
+               <button onClick={() => {nav('/HomePage')}} class="mb-20 text-2xl rounded-lg text-sky hover:before:bg-skyborder-sky-900 relative h-[50px] w-40 overflow-hidden border border-sky-900 bg-white px-3 text-sky-900 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-sky-900 before:transition-all before:duration-500 hover:text-white hover:shadow-sky-700 hover:before:left-0 hover:before:w-full"><span class="relative z-10">Explore</span></button>
             
             </div>
         </div>

@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bg': "url('./images/bg.jpg')",
+        nature : "url('/images/nature.png')",
+        shows : 'url("/images/shows.png")',
+        food : 'url("/images/food.png")',
+        people : 'url("/images/people.png")',
       }
     },
   },
