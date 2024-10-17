@@ -32,12 +32,10 @@ const Banner = () => {
                 ))}
             </div>
 
-            {/* Responsive text container */}
             <div className="flex flex-col justify-center items-center absolute left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg h-screen max-h-screen-lg px-4">
                 <img className="w-[42rem] h-auto" src={logo3} />
             </div>
 
-            {/* Responsive button */}
                <div className="w-screen h-screen flex items-end justify-center ">
                <button onClick={() => {nav('/HomePage')}} class="mb-20 text-2xl rounded-lg text-black hover:before:bg-black relative h-[50px] w-40 overflow-hidden border border-white bg-white px-3 text-black-900 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-black before:transition-all before:duration-500 hover:text-white hover:shadow-white hover:before:left-0 hover:before:w-full"><span class="relative z-10">Explore</span></button>
             

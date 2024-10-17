@@ -2,6 +2,7 @@ import "./gallery.css";
 import { useState } from "react";
 import back from "/images/back.png";
 import { useNavigate } from "react-router";
+import Navbar from "../components/NavBar";
 
 import img1 from "/Ecosystem/img1.jpg";  
 import img2 from "/Ecosystem/img2.jpg";  
@@ -204,7 +205,7 @@ const Ecosystem = () => {
 
   return (
     <div>
-    {/* Full-Screen Image Modal with Transition */}
+      <Navbar />
     {model && (
         <div className={`fixed inset-0 z-50 flex justify-center items-center bg-stone-950 bg-opacity-100 transition-opacity duration-300 ease-in-out ${model ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} onClick={closeModel}>
             <img
@@ -215,9 +216,7 @@ const Ecosystem = () => {
         </div>
     )}
     
-    {/* Main Content */}
-    
-        <div className="overflow-x-hidden bg-[#081302] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
+        <div className="overflow-x-hidden bg-[#081302] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll ">
           <div className="w-fit">
            <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center"><img src={back} /></button>
           </div>

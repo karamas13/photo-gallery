@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import Ecosystem from './pages/Ecosystem';
 import Concerts from './pages/Concerts';
 import MealsnShips from './pages/MealsnShips';
+import Individuals from './pages/Individuals';
  
 const router = createBrowserRouter( [
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter( [
   {
     path: '/MealsnShips',
     element: <MealsnShips />
+  },
+  {
+    path: '/Individuals',
+    element: <Individuals />
   },
 
 ] );
