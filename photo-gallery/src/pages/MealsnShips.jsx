@@ -3,6 +3,7 @@ import { useState } from "react";
 import back from "/images/back.png";
 import { useNavigate } from "react-router";
 import Navbar from "../components/NavBar";
+import logowhite from "/images/logowhite.png"
 
 import img1 from "/MealsnSips/img1.jpg";  
 import img2 from "/MealsnSips/img2.jpg";  
@@ -303,23 +304,25 @@ const Ecosystem = () => {
         </div>
     )}
     
-        <div className="overflow-x-hidden bg-orange-950 mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
+        <div className="overflow-x-hidden bg-[#281603] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
+        
           <div className="w-fit">
            <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center"><img src={back} /></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
+           <img className="h-[9rem]" src={ logowhite } />
                 <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Meals n' Sips</h1>
                 <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut facilis cupiditate, rerum id asperiores iure in. Sit voluptas libero adipisci.
+                "In the world of food and drinks, visuals are everything. A great picture doesn't just capture a dish or a drink—it sets the mood, sparks appetite, and elevates the experience. Whether through vibrant colors or intricate design, the right image can ignite the imagination, making you taste the flavors just by looking. It’s often said that the perfect dish begins by tasting with your eyes before you ever take a bite or sip."
                 </p>
             </div>
 
-            <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-10">
+            <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-5">
                 {data.map((item, index) => {
                     return (
                         <div className="w-full py-2 px-0" key={index} onClick={() => getImg(item.imgSrc)}>
                             <img
-                                className="w-full h-auto hover:opacity-60 transition-opacity duration-200 cursor-pointer"
+                                className="w-full h-auto cursor-pointer"
                                 src={item.imgSrc}
                                 alt={`Image ${index + 1}`}
                             />

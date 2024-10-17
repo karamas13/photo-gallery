@@ -3,6 +3,7 @@ import { useState } from "react";
 import back from "/images/back.png";
 import { useNavigate } from "react-router";
 import Navbar from "../components/NavBar";
+import logowhite from "/images/logowhite.png";
 
 import img1 from "/Ecosystem/img1.jpg";  
 import img2 from "/Ecosystem/img2.jpg";  
@@ -216,23 +217,24 @@ const Ecosystem = () => {
         </div>
     )}
     
-        <div className="overflow-x-hidden bg-[#081302] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll ">
+        <div className="overflow-x-hidden bg-[#071001] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll ">
           <div className="w-fit">
            <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center"><img src={back} /></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
+                <img className="h-[9rem]" src={ logowhite } />
                 <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Ecosystems</h1>
                 <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut facilis cupiditate, rerum id asperiores iure in. Sit voluptas libero adipisci.
+                "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view. These images transport viewers to locations where nature's beauty is untouched, from sweeping vistas to serene corners rarely seen by most. Each photograph reflects not just the grandeur of these places, but also the effort and adventure it takes to witness them, and the eye required to capture them, inviting viewers beyond the ordinary."
                 </p>
             </div>
 
-            <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-10">
+            <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-5">
                 {data.map((item, index) => {
                     return (
                         <div className="w-full py-2 px-0" key={index} onClick={() => getImg(item.imgSrc)}>
                             <img
-                                className="w-full h-auto hover:opacity-60 transition-opacity duration-200 cursor-pointer"
+                                className="w-full h-auto cursor-pointer"
                                 src={item.imgSrc}
                                 alt={`Image ${index + 1}`}
                             />

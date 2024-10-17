@@ -3,6 +3,7 @@ import { useState } from "react";
 import back from "/images/back.png";
 import { useNavigate } from "react-router";
 import Navbar from "../components/NavBar";
+import logowhite from "/images/logowhite.png"
 
 import img1 from "/Individuals/img1.jpg";  
 import img2 from "/Individuals/img1.png";  
@@ -246,18 +247,19 @@ const Ecosystem = () => {
            <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center"><img src={back} /></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
+                <img className="h-[9rem]" src={ logowhite } /> 
                 <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Individuals</h1>
                 <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut facilis cupiditate, rerum id asperiores iure in. Sit voluptas libero adipisci.
+                "Portraits are more than just pictures of people, they’re crafted to capture the essence of human expression and emotion. They freeze moments in time, preserving the subtle details that often go unnoticed: expressions, gestures, and personalities. Whether for memories, showcasing style, or professional representation, portraits offer a window into who we are. A well-crafted portrait highlights the uniqueness of each individual, capturing their distinctive traits and overall vibe."
                 </p>
             </div>
 
-            <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-10">
+            <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-5">
                 {data.map((item, index) => {
                     return (
                         <div className="w-full py-2 px-0" key={index} onClick={() => getImg(item.imgSrc)}>
                             <img
-                                className="w-full h-auto hover:opacity-60 transition-opacity duration-200 cursor-pointer"
+                                className="w-full h-auto cursor-pointer"
                                 src={item.imgSrc}
                                 alt={`Image ${index + 1}`}
                             />
