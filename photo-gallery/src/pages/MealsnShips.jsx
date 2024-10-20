@@ -4,6 +4,7 @@ import back from "/images/back.png";
 import { useNavigate } from "react-router";
 import Navbar from "../components/NavBar";
 import logowhite from "/images/logowhite.png"
+import { Helmet } from "react-helmet";
 
 import img1 from "/MealsnSips/img1.jpg";  
 import img2 from "/MealsnSips/img2.jpg";  
@@ -60,7 +61,7 @@ import img52 from "/MealsnSips/img52.jpg";
 import img53 from "/MealsnSips/img53.jpg"; 
 
 
-const Ecosystem = () => {
+const MealsnSips = () => {
   const nav = useNavigate();
   
   let data = [
@@ -293,6 +294,12 @@ const Ecosystem = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Meals n' Sips Gallery - Nikos Brinias Gallery</title>
+        <meta name="description" content="Explore my gallery of meals and drinks showcasing vibrant food photography that sparks the imagination." />
+        <meta name="keywords" content="Meals, Food Photography, Drinks, Sips, Gallery" />
+      </Helmet>
+
       <Navbar />
     {model && (
         <div className={`fixed inset-0 z-50 flex justify-center items-center bg-stone-950 bg-opacity-100 transition-opacity duration-300 ease-in-out ${model ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} onClick={closeModel}>
@@ -307,7 +314,7 @@ const Ecosystem = () => {
         <div className="overflow-x-hidden bg-[#281603] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
         
           <div className="w-fit">
-           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center"><img src={back} /></button>
+           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back"><img src={back} alt="Go Back Button" /></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
            <img className="h-[9rem]" src={ logowhite } />
@@ -324,7 +331,7 @@ const Ecosystem = () => {
                             <img
                                 className="w-full h-auto cursor-pointer"
                                 src={item.imgSrc}
-                                alt={`Image ${index + 1}`}
+                                alt={`Food Or Drink Image ${index + 1}`}
                             />
                         </div>
                     );
@@ -336,4 +343,4 @@ const Ecosystem = () => {
     );
 }
  
-export default Ecosystem;
+export default MealsnSips;

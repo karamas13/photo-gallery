@@ -4,6 +4,7 @@ import back from "/images/back.png";
 import { useNavigate } from "react-router";
 import Navbar from "../components/NavBar";
 import logowhite from "/images/logowhite.png"
+import { Helmet } from 'react-helmet';
 
 import img1 from "/Concerts/img1.jpg";  
 import img3 from "/Concerts/img3.png";  
@@ -58,7 +59,7 @@ import img49 from "/Concerts/img49.jpg";
 
 
 
-const Ecosystem = () => {
+const Concerts = () => {
   const nav = useNavigate();
   
   let data = [
@@ -270,7 +271,14 @@ const Ecosystem = () => {
   }
 
   return (
+    
     <div>
+    <Helmet>
+      <title>Concerts - Nikos Brinias Photo Gallery</title>
+      <meta name="description" content="Explore stunning concert images showcasing powerful live performances." />
+      <meta name="keywords" content="Concerts, Music, Live Events, Photography, Visuals" />
+    </Helmet>
+
      <Navbar />
     {model && (
         <div className={`fixed inset-0 z-50 flex justify-center items-center bg-stone-950 bg-opacity-100 transition-opacity duration-300 ease-in-out ${model ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} onClick={closeModel}>
@@ -281,11 +289,9 @@ const Ecosystem = () => {
             />
         </div>
     )}
-    
-    
         <div className="overflow-x-hidden bg-[#020a18] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
           <div className="w-fit">
-           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center"><img src={back} /></button>
+           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back"><img src={back} alt="Go Back Button"/></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
                 <img className="h-[9rem]" src={ logowhite } /> 
@@ -302,7 +308,7 @@ const Ecosystem = () => {
                             <img
                                 className="w-full h-auto cursor-pointer"
                                 src={item.imgSrc}
-                                alt={`Image ${index + 1}`}
+                                alt={`Concert Image ${index + 1}`}
                             />
                         </div>
                     );
@@ -314,4 +320,4 @@ const Ecosystem = () => {
     );
 }
  
-export default Ecosystem;
+export default Concerts;
