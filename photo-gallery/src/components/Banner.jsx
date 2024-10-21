@@ -41,7 +41,7 @@ const Banner = () => {
                <button onClick={() => {nav('/HomePage')}} class="mb-20 text-2xl rounded-lg text-black hover:before:bg-black relative h-[50px] w-40 overflow-hidden border border-white bg-white px-3 text-black-900 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-black before:transition-all before:duration-500 hover:text-white hover:shadow-white hover:before:left-0 hover:before:w-full"><span class="relative z-1">Explore</span></button>
             
             </div>
-        </div>
+            </div>
     );
 };
 

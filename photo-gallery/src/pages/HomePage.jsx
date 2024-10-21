@@ -12,7 +12,7 @@ function HomePage() {
       <Helmet>
         <title>Home - Nikos Brinias Photography</title>
         <meta name="description" content="Explore stunning ecosystems, individuals, meals, and concerts through captivating photography. Contact me to learn more." />
-        <meta name="keywords" content="photography, ecosystems, concerts, portraits, meals, contact, visuals" />
+        <meta name="keywords" content="photography, ecosystems, concerts, portraits, meals, contact, visuals, nikos, brinias" />
       </Helmet>
       <div>
         <Navbar />
@@ -105,10 +105,12 @@ function HomePage() {
             </div>
             <div className="flex flex-col h-full items-end justify-end w-screen">
               <img className="h-[25rem] md:h-[35rem] object-cover mx-auto" src={portrait} alt="Portrait of Nikos Brinias" />
+              <footer className="m-10 mt-20 border-t-2 border-white mx-auto text-white"><p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karmaroudis</p></footer>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
