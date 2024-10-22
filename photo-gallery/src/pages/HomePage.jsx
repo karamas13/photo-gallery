@@ -17,24 +17,7 @@ function HomePage() {
       <div>
         <Navbar />
         <div>
-          {/* Ecosystems Section */}
-          <div className="lg:bg-nature md:bg-nature bg-nature2 min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
-            <div className="flex flex-col justify-start items-start max-w-md">
-              <h1 className="text-4xl md:text-6xl font-bold font-serif text-white">Ecosystems</h1>
-              <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
-                "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view. These images transport viewers to locations where nature's beauty is untouched, from sweeping vistas to serene corners rarely seen by most..."
-              </p>
-              <button 
-                onClick={() => { nav('/Ecosystem') }} 
-                className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5"
-                aria-label="Navigate to Ecosystems"
-              >
-                <div className="absolute inset-0 w-3 bg-green-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
-                <span className="relative text-black group-hover:text-white">Ecosystems</span>
-              </button>
-            </div>
-          </div>
-
+          
           {/* Individuals Section */}
           <div className="lg:bg-people md:bg-people bg-individuals min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
             <div className="flex flex-col justify-start items-start max-w-md">
@@ -88,6 +71,25 @@ function HomePage() {
               </button>
             </div>
           </div>
+
+          {/* Ecosystems Section */}
+          <div className="lg:bg-nature md:bg-nature bg-nature2 min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
+            <div className="flex flex-col justify-start items-start max-w-md">
+              <h1 className="text-4xl md:text-6xl font-bold font-serif text-white">Ecosystems</h1>
+              <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
+                "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view. These images transport viewers to locations where nature's beauty is untouched, from sweeping vistas to serene corners rarely seen by most..."
+              </p>
+              <button 
+                onClick={() => { nav('/Ecosystem') }} 
+                className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow mt-5"
+                aria-label="Navigate to Ecosystems"
+              >
+                <div className="absolute inset-0 w-3 bg-green-600 transition-all duration-[350ms] ease-out group-hover:w-full"></div>
+                <span className="relative text-black group-hover:text-white">Ecosystems</span>
+              </button>
+            </div>
+          </div>
+
 
           {/* About Me Section */}
           <div className="bg-[#000001] h-fit md:h-fit bg-cover flex flex-col justify-center items-center">
