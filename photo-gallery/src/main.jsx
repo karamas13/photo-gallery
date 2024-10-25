@@ -8,6 +8,9 @@ import Ecosystem from './pages/Ecosystem';
 import Concerts from './pages/Concerts';
 import MealsnShips from './pages/MealsnShips';
 import Individuals from './pages/Individuals';
+import UploadForm from './components/UploadForm';
+
+
  
 const router = createBrowserRouter( [
   {
@@ -33,6 +36,10 @@ const router = createBrowserRouter( [
   {
     path: '/Individuals',
     element: <Individuals />
+  },
+  {
+    path: '/UploadForm',
+    element: <UploadForm />
   },
 
 ] );
