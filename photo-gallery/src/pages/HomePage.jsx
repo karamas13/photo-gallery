@@ -3,6 +3,9 @@ import Navbar from "../components/NavBar";
 import portrait from "/images/portrait.png";
 import logowhite from "/images/logowhite.png";
 import { Helmet } from 'react-helmet'; 
+import './parallax.css';
+
+
 
 function HomePage() {
   const nav = useNavigate();
@@ -19,7 +22,7 @@ function HomePage() {
         <div>
           
           {/* Individuals Section */}
-          <div className="lg:bg-people md:bg-people bg-individuals min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-people bg-individuals min-h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Individuals</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -37,7 +40,7 @@ function HomePage() {
           </div>
 
           {/* Meals and Sips Section */}
-          <div className="lg:bg-food md:bg-food bg-mealsnsips h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-food bg-mealsnsips h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Meals n' Sips</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -55,7 +58,7 @@ function HomePage() {
           </div>
 
           {/* Concerts Section */}
-          <div className="lg:bg-shows md:bg-shows bg-concerts h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-shows bg-concerts h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Concerts</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -73,11 +76,11 @@ function HomePage() {
           </div>
 
           {/* Ecosystems Section */}
-          <div className="lg:bg-nature md:bg-nature bg-nature2 min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-nature bg-nature2 min-h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl font-bold font-serif text-white">Ecosystems</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
-                "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view. These images transport viewers to locations where nature's beauty is untouched, from sweeping vistas to serene corners rarely seen by most..."
+                "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view..."
               </p>
               <button 
                 onClick={() => { nav('/Ecosystem') }} 
@@ -90,14 +93,13 @@ function HomePage() {
             </div>
           </div>
 
-
           {/* About Me Section */}
           <div className="bg-[#000001] h-fit md:h-fit bg-cover flex flex-col justify-center items-center">
             <img className="h-[5rem] w-auto mt-5" src={logowhite} alt="Logo" />
             <div className="flex flex-col justify-center lg:items-center items-center text-center max-w-2xl p-5">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">About Me</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
-              "Since day one, my work has been driven by a unique aesthetic that captures the essence of each moment. I approach every project with a focused mindset, ensuring that my creative vision shines through. With each click, I recognize and embrace the energy of the moment, allowing it to influence my shots. My dedication lies in expressing my personal artistic style and connecting authentically with the subjects I capture. This commitment to individuality not only shapes my images but also fosters genuine moments that resonate deeply with those who view my work."
+                "Since day one, my work has been driven by a unique aesthetic that captures the essence of each moment..."
               </p>
 
               <h2 className="text-4xl md:text-6xl text-white font-bold font-serif mt-[5rem]">Contact Me</h2>
@@ -107,12 +109,13 @@ function HomePage() {
             </div>
             <div className="flex flex-col h-full items-end justify-end w-screen">
               <img className="h-[25rem] md:h-[35rem] object-cover mx-auto" src={portrait} alt="Portrait of Nikos Brinias" />
-              <footer className="m-10 mt-20 border-t-2 border-white mx-auto text-white"><p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karmaroudis</p></footer>
+              <footer className="m-10 mt-20 border-t-2 border-white mx-auto text-white">
+                <p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karmaroudis</p>
+              </footer>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
