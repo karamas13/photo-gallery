@@ -3,9 +3,7 @@ import Navbar from "../components/NavBar";
 import portrait from "/images/portrait.png";
 import logowhite from "/images/logowhite.png";
 import { Helmet } from 'react-helmet'; 
-import './parallax.css';
-
-
+import './parallax.css'
 
 function HomePage() {
   const nav = useNavigate();
@@ -22,7 +20,7 @@ function HomePage() {
         <div>
           
           {/* Individuals Section */}
-          <div className="lg:bg-people bg-individuals min-h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
+          <div className="lg:bg-people bg-individuals min-h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Individuals</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -40,7 +38,7 @@ function HomePage() {
           </div>
 
           {/* Meals and Sips Section */}
-          <div className="lg:bg-food bg-mealsnsips h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
+          <div className="lg:bg-food bg-mealsnsips h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Meals n' Sips</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -58,7 +56,7 @@ function HomePage() {
           </div>
 
           {/* Concerts Section */}
-          <div className="lg:bg-shows bg-concerts h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
+          <div className="lg:bg-shows bg-concerts h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Concerts</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -76,7 +74,7 @@ function HomePage() {
           </div>
 
           {/* Ecosystems Section */}
-          <div className="lg:bg-nature bg-nature2 min-h-screen bg-cover flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
+          <div className="lg:bg-nature bg-nature2 min-h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl font-bold font-serif text-white">Ecosystems</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -116,6 +114,7 @@ function HomePage() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

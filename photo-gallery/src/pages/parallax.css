@@ -1,21 +1,9 @@
-/* Base styles for the parallax effect */
 .parallax {
     background-attachment: fixed; /* Keeps the background fixed */
-    background-position: center; /* Centers the background */
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    background-size: cover; /* Ensures the background covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
-  .section {
-    min-height: 100vh; /* Full viewport height for sections */
-    position: relative; /* Positioning context for inner content */
-    overflow: hidden; /* Prevent overflow issues */
-  }
-  
-  /* Prevent default scrolling on iOS devices */
-  @media screen and (max-width: 767px) {
-    .parallax {
-      background-attachment: scroll; /* Fallback for mobile */
-    }
-  }
+  /* To ensure mobile compatibility, remove any specific mobile styles that might disable the effect */
   
