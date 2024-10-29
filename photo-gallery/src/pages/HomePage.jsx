@@ -3,10 +3,35 @@ import Navbar from "../components/NavBar";
 import portrait from "/images/portrait.png";
 import logowhite from "/images/logowhite.png";
 import { Helmet } from 'react-helmet'; 
-import './parallax.css'
+import { useEffect } from 'react';
 
 function HomePage() {
   const nav = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const parallaxElements = document.querySelectorAll('.parallax');
+
+      parallaxElements.forEach((el) => {
+        // Adjust background position based on scroll
+        el.style.backgroundPositionY = `${scrolled * 0.5}px`; // Adjust the multiplier for desired speed
+      });
+    };
+
+    // Check for iOS devices
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    // Add scroll event listener for non-iOS devices
+    if (!isIOS) {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      // Remove event listener
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll overflow-x-hidden z-1 font-serif">
@@ -20,7 +45,7 @@ function HomePage() {
         <div>
           
           {/* Individuals Section */}
-          <div className="lg:bg-people bg-individuals min-h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-people bg-individuals min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Individuals</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -38,7 +63,7 @@ function HomePage() {
           </div>
 
           {/* Meals and Sips Section */}
-          <div className="lg:bg-food bg-mealsnsips h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-food bg-mealsnsips h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Meals n' Sips</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -56,7 +81,7 @@ function HomePage() {
           </div>
 
           {/* Concerts Section */}
-          <div className="lg:bg-shows bg-concerts h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-shows bg-concerts h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">Concerts</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -74,7 +99,7 @@ function HomePage() {
           </div>
 
           {/* Ecosystems Section */}
-          <div className="lg:bg-nature bg-nature2 min-h-screen bg-cover parallax flex flex-col justify-center p-5 md:p-10 lg:p-20">
+          <div className="lg:bg-nature bg-nature2 min-h-screen bg-cover bg-fixed flex flex-col justify-center p-5 md:p-10 lg:p-20 parallax">
             <div className="flex flex-col justify-start items-start max-w-md">
               <h1 className="text-4xl md:text-6xl font-bold font-serif text-white">Ecosystems</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
@@ -97,7 +122,7 @@ function HomePage() {
             <div className="flex flex-col justify-center lg:items-center items-center text-center max-w-2xl p-5">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">About Me</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
-                "Since day one, my work has been driven by a unique aesthetic that captures the essence of each moment..."
+              "Since day one, my work has been driven by a unique aesthetic that captures the essence of each moment..."
               </p>
 
               <h2 className="text-4xl md:text-6xl text-white font-bold font-serif mt-[5rem]">Contact Me</h2>

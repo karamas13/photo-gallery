@@ -1,9 +1,9 @@
 .parallax {
-    background-attachment: fixed; /* Keeps the background fixed */
+    background-attachment: scroll; /* Prevent fixed attachment for all devices */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   
-  /* To ensure mobile compatibility, remove any specific mobile styles that might disable the effect */
+
   
