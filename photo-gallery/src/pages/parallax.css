@@ -1,9 +1,5 @@
-.parallax {
-    background-attachment: scroll; /* Prevent fixed attachment for all devices */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@supports (-webkit-touch-callout: none) {
+  .parallax {
+    background-attachment: scroll; /* Disable parallax effect */
   }
-  
-
-  
+}
