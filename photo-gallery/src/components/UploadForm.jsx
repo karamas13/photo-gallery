@@ -82,7 +82,7 @@ const UploadForm = () => {
             <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-[150px]">
                 {docs && docs.map((doc) => (
                     
-                    <div className="w-full py-2 px-0 flex flex-col justify-start items-start" key={doc.id}>                        
+                    <div className="w-full py-2 px-0 flex" key={doc.id}>                        
                         
                         <img
                             className="w-full h-auto cursor-pointer"
