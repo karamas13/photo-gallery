@@ -56,7 +56,7 @@ const Individuals = () => {
           <img className="h-[9rem]" src={logowhite} alt="Logo" />
           <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Individuals</h1>
           <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
-            "Portraits are more than just pictures of people; they’re crafted to capture the essence of human expression and emotion..."
+          "Portraits are more than just pictures of people they’re crafted to capture the essence of human expression and emotion. They freeze moments in time, preserving the subtle details that often go unnoticed: expressions, gestures, and personalities. Whether for memories, showcasing style, or professional representation, portraits offer a window into who we are. A well-crafted portrait highlights the uniqueness of each individual, capturing their distinctive traits and overall vibe."
           </p>
         </div>
 

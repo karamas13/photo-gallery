@@ -9,6 +9,9 @@ import Concerts from './pages/Concerts';
 import MealsnShips from './pages/MealsnShips';
 import Individuals from './pages/Individuals';
 import UploadForm from './components/UploadForm';
+import SignIn from './pages/SignIn';
+import AuthContext from './Context/AuthContext';
+import Protected from './components/Protected';
 
 
  
@@ -39,13 +42,17 @@ const router = createBrowserRouter( [
   },
   {
     path: '/UploadForm',
-    element: <UploadForm />
+    element: <Protected><UploadForm /></Protected>
+  },
+  {
+    path: '/SignIn',
+    element: <SignIn />
   },
 
 ] );
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+   <AuthContext> 
     <RouterProvider   router={router} />
-  </StrictMode>,
+   </AuthContext>
 )

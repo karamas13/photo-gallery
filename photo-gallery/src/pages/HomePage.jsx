@@ -124,18 +124,18 @@ function HomePage() {
             <div className="flex flex-col justify-center lg:items-center items-center text-center max-w-2xl p-5">
               <h1 className="text-4xl md:text-6xl text-white font-bold font-serif">About Me</h1>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
-                "Since day one, my work has been driven by a unique aesthetic that captures the essence of each moment..."
+              "Since day one, my work has been driven by a unique aesthetic that captures the essence of each moment. I approach every project with a focused mindset, ensuring that my creative vision shines through. With each click, I recognize and embrace the energy of the moment, allowing it to influence my shots. My dedication lies in expressing my personal artistic style and connecting authentically with the subjects I capture. This commitment to individuality not only shapes my images but also fosters genuine moments that resonate deeply with those who view my work."
               </p>
 
               <h2 className="text-4xl md:text-6xl text-white font-bold font-serif mt-[5rem]">Contact Me</h2>
               <p className="mt-4 text-base md:text-lg lg:text-xl text-white">
-                Email: <a href="mailto:nikosbrinias@gmail.com" className="underline">nikosbrinias38@gmail.com</a>
+                Email: <a href="mailto:nikosbrinias38@gmail.com" className="underline">nikosbrinias38@gmail.com</a>
               </p>
             </div>
             <div className="flex flex-col h-full items-end justify-end w-screen">
               <img className="h-[25rem] md:h-[35rem] object-cover mx-auto" src={portrait} alt="Portrait of Nikos Brinias" />
               <footer className="m-10 mt-20 border-t-2 border-white mx-auto text-white">
-                <p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Kararoudis</p>
+                <p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karamaroudis</p>
               </footer>
             </div>
           </div>

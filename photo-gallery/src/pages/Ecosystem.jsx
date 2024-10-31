@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import useFirestore from "../hooks/useFirestore";
 
 
+
 const Ecosystem = () => {
   const nav = useNavigate();
   const { docs } = useFirestore('Ecosystems');
@@ -26,6 +27,7 @@ const Ecosystem = () => {
       setModel(false);
       setTempImgSrc('');
   }
+  
 
   return (
     <div>
@@ -55,19 +57,21 @@ const Ecosystem = () => {
           <img className="h-[9rem]" src={logowhite} alt="Logo" />
           <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Ecosystems</h1>
           <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
-            "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view. These images transport viewers to locations where nature's beauty is untouched..."
+          "Landscape photography offers a glimpse into the extraordinary. Capturing breathtaking views and hidden places from the perfect point of view. These images transport viewers to locations where nature's beauty is untouched, from sweeping vistas to serene corners rarely seen by most. Each photograph reflects not just the grandeur of these places, but also the effort and adventure it takes to witness them, and the eye required to capture them, inviting viewers beyond the ordinary."
           </p>
         </div>
 
         <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-5">
           {docs && docs.map((doc) => {
             return (
-              <div className="w-full py-2 px-0" key={doc.id} onClick={() => getImg(doc.url)}>
+              
+              <div className="w-full py-2 px-0 z-10" key={doc.id} onClick={() => getImg(doc.url)}>
+                
                 <img
                     className="w-full h-auto cursor-pointer"
                     src={doc.url}
                     alt={`Ecosystem Image ${doc.id + 1}`} 
-                />
+                />           
               </div>
             );
           })}

@@ -6,12 +6,14 @@ import dotenv from 'dotenv'
 export default defineConfig({
   plugins: [react()],
   define: {
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
-    'process.env.AUTH_DOMAIN': JSON.stringify(process.env.AUTH_DOMAIN),
-    'process.env.PROJECT_ID': JSON.stringify(process.env.PROJECT_ID),
-    'process.env.STORAGE_BUCKET': JSON.stringify(process.env.STORAGE_BUCKET),
-    'process.env.MESSAGING_SENDER_ID': JSON.stringify(process.env.MESSAGING_SENDER_ID),
-    'process.env.APP_ID': JSON.stringify(process.env.APP_ID),
+    'process.env' :{
+      VITE_API_KEY: JSON.stringify(process.env.VITE_API_KEY),
+      VITE_AUTH_DOMAIN: JSON.stringify(process.env.VITE_AUTH_DOMAIN),
+      VITE_PROJECT_ID: JSON.stringify(process.env.VITE_PROJECT_ID),
+      VITE_STORAGE_BUCKET: JSON.stringify(process.env.VITE_STORAGE_BUCKET),
+      VITE_MESSAGING_SENDER_ID: JSON.stringify(process.env.VITE_MESSAGING_SENDER_ID),
+      VITE_APP_ID: JSON.stringify(process.env.VITE_APP_ID),
+    }
     
   }
 })
