@@ -44,6 +44,10 @@
 * Security Features
 
 
+## How To Use
+https://nikosbrinias-photography.netlify.app/
+
+
 ## Overview
 
 Nikos Brinias Photography is a feature-rich photo gallery website, aiming to allow the client to showcase his work and talent in a beautiful environment. The application is designed to handle key functionalities essential for a robust photo-gallery experience, including user authentication, crud management of the gallery, database management, and more. 
