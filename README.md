@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <img src="https://github.com/user-attachments/assets/c1766d16-1ed7-4bb1-b09e-9329619b08a9" alt="Lotus" width="400">
+  <img src="https://github.com/karamas13/photo-gallery/blob/main/photo-gallery/public/images/logowhite.png" alt="NB Photography" width="400">
   <br>
   Nikos Brinias Photography
   <br>
