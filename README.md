@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://www.firebase.com">
-    <img src="![Static Badge](https://img.shields.io/badge/Firebase-orange?logo=firebase)">
+    <img src="https://img.shields.io/badge/Firebase-orange?logo=firebase">
   </a>
   <a href="https://react.dev/">
     <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
