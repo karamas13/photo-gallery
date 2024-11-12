@@ -36,7 +36,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll overflow-x-hidden z-1 font-serif">
+    <div className="min-h-screen scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll overflow-x-hidden z-1 font-serif">
       <Helmet>
         <title>Home - Nikos Brinias Photography</title>
         <meta name="description" content="Explore stunning ecosystems, individuals, meals, and concerts through captivating photography. Contact me to learn more." />

@@ -35,7 +35,7 @@ const UploadForm = () => {
             console.log("Photo deleted successfully");
 
             // Delete corresponding Firestore document
-            const docRef = doc(projectFirestore, 'Ecosystems', docId); // Reference to the Firestore document
+            const docRef = doc(projectFirestore, selectedCategory, docId); // Reference to the Firestore document using the selected category
             await deleteDoc(docRef);
             console.log("Firestore document deleted successfully");
 
@@ -82,13 +82,19 @@ const UploadForm = () => {
             <div className="columns-1 sm:columns-2 md:columns-3 w-full mx-auto mt-[150px]">
                 {docs && docs.map((doc) => (
                     
-                    <div className="w-full py-2 px-0 flex" key={doc.id}>                        
+                    <div className="w-full py-2 px-0 flex relative" key={doc.id}>                         
                         
                         <img
                             className="w-full h-auto cursor-pointer"
-                            src={doc.url}                      
+                            src={doc.url}
+                            alt={`Image ${doc.id}`}
                         />
-                   <button onClick={() => handleDelete(doc.id, doc.url)} className="absolute bg-red-600 text-xl rounded-sm text-[#f1f1f1] p-1 font-mono">Delete</button>
+                        <button 
+                            onClick={() => handleDelete(doc.id, doc.url)} 
+                            className="absolute bg-red-600 text-xl rounded-sm text-[#f1f1f1] p-1 font-mono"
+                        >
+                            Delete
+                        </button>
                     </div>
                 ))}
             </div>
