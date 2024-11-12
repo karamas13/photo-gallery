@@ -45,7 +45,7 @@
 
 
 ## How To Use
-https://nikosbrinias-photography.netlify.app/
+https://nikosbriniasphotography.com/
 
 
 ## Overview
