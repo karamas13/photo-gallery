@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'ica-rubrik-black';
+    src: url('https://cdnfonts.com/css/ica-rubrik-black') format('woff2');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'poppins';
+    src: url('https://cdnfonts.com/css/poppins') format('woff2');
+    font-display: swap;
+  }
+  
