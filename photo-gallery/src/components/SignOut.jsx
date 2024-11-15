@@ -5,8 +5,7 @@ const SignOut = () => {
 
     async function handleSignOut() {
        try {
-        await signOut(auth);
-        console.log(user)
+        await signOut(auth);        
        } catch(e) {
         console.log(e)
        } 

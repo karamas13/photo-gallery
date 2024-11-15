@@ -1,23 +1,22 @@
 import React from 'react';
 import './styles.css'; 
 import { useNavigate } from 'react-router';
-import logo3 from '/images/logo3.png';
-import perspective from '/images/perspective.png';
+import perspective from '/images/perspective.avif';
 
 const Banner = () => {
     const nav = useNavigate();
 
     const images = [
-        '/images/dragon_1.png',
-        '/images/dragon_ 2.png',
-        '/images/dragon_ 3.png',
-        '/images/dragon_ 4.png',
-        '/images/dragon_ 5.png',
-        '/images/dragon_ 6.png',
-        '/images/dragon_ 7.png',
-        '/images/dragon_ 8.png',
-        '/images/dragon_ 9.png',
-        '/images/dragon_ 10.png',
+        '/images/dragon_ 1.avif',
+        '/images/dragon_ 2.avif',
+        '/images/dragon_ 3.avif',
+        '/images/dragon_ 4.avif',
+        '/images/dragon_ 5.avif',
+        '/images/dragon_ 6.avif',
+        '/images/dragon_ 7.avif',
+        '/images/dragon_ 8.avif',
+        '/images/dragon_ 9.avif',
+        '/images/dragon_ 10.avif',
     ];
 
     return (
@@ -34,7 +33,7 @@ const Banner = () => {
             </div>
 
             <div className="flex flex-col justify-center items-center absolute left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg h-screen max-h-screen-lg px-4">
-                <img className="lg:w-[40rem] md:w-[30rem] mb-[7rem] h-auto" src={perspective} />
+                <img className="lg:w-[40rem] md:w-[30rem] mb-[7rem] w-auto h-auto" src={perspective} alt="Nikos Brinias Logo"/>
             </div>
 
                <div className="w-screen h-screen flex items-end justify-center mt-5">
