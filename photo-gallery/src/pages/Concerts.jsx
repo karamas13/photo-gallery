@@ -49,12 +49,12 @@ const Concerts = () => {
             />
         </div>
     )}
-        <div className="overflow-x-hidden bg-[#020a18] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
+        <div className="overflow-x-hidden bg-[#020a18] mx-auto min-h-screen scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
           <div className="w-fit">
-           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back"><img src={back} alt="Go Back Button"/></button>
+           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back"><img className="object-cover" width="40" height="25" src={back} alt="Go Back Button"/></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
-                <img className="h-[9rem]" src={ logowhite } /> 
+                <img className="h-[9rem]" src={ logowhite } alt="Nikos Brinias Logo"/> 
                 <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Concerts</h1>
                 <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
                 "Live concerts are a powerful spectacle that showcases the artist's glory in a captivating display of talent and energy. The stage transforms into a canvas where performers connect deeply with their audience. The crowd, alive with excitement, contributes to the atmosphere, creating a dynamic interplay that enhances every moment captured. From stunning visuals of lights and smoke to the palpable buzz in the air, each photograph encapsulates the essence of live performance, intense sounds and unforgettable experiences."
@@ -68,7 +68,8 @@ const Concerts = () => {
                 <img
                     className="w-full h-auto cursor-pointer"
                     src={doc.url}
-                    alt={`Ecosystem Image ${doc.id + 1}`} 
+                    alt={`Concerts Image ${doc.id + 1}`} 
+                    loading="lazy"
                 />
               </div>
             );

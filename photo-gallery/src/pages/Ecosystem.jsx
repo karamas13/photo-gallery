@@ -47,10 +47,10 @@ const Ecosystem = () => {
         </div>
       )}
     
-      <div className="overflow-x-hidden bg-[#071001] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
+      <div className="overflow-x-hidden bg-[#071001] mx-auto min-h-screen scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
         <div className="w-fit">
           <button onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back">
-            <img src={back} alt="Go Back Button" />
+            <img className="object-cover" width="40" height="25" src={back} alt="Go Back Button" />
           </button>
         </div>
         <div className="w-screen flex flex-col justify-center items-center p-5">
@@ -70,13 +70,14 @@ const Ecosystem = () => {
                 <img
                     className="w-full h-auto cursor-pointer"
                     src={doc.url}
-                    alt={`Ecosystem Image ${doc.id + 1}`} 
+                    alt={`Ecosystem Image ${doc.id + 1}`}
+                    loading="lazy" 
                 />           
               </div>
             );
           })}
         </div>
-        <footer className="m-10 mt-20 border-t-2 border-white mx-auto text-white lg:w-[40%] w-full"><p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karamaroudis</p></footer>
+        <footer className="my-20 border-t-2 border-white mx-auto text-white lg:w-[40%] w-full"><p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karamaroudis</p></footer>
       </div>
     </div>
   );

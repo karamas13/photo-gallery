@@ -48,13 +48,13 @@ const MealsnSips = () => {
         </div>
     )}
     
-        <div className="overflow-x-hidden bg-[#281603] mx-auto min-h-screen scrollbar scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
+        <div className="overflow-x-hidden bg-[#281603] mx-auto min-h-screen scrollbar-thin scrollbar-thumb-stone-950 scrollbar-track-stone-700 h-32 overflow-y-scroll">
         
           <div className="w-fit">
-           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back"><img src={back} alt="Go Back Button" /></button>
+           <button  onClick={() => nav(-1)} className="text-2xl m-5 bg-black py-1 text-white px-5 rounded-lg hover:opacity-60 text-center" aria-label="Go Back"><img className="object-cover" width="40" height="25" src={back} alt="Go Back Button" /></button>
           </div>
            <div className="w-screen flex flex-col justify-center items-center p-5">
-           <img className="h-[9rem]" src={ logowhite } />
+           <img className="h-[9rem]" src={ logowhite } alt="Nikos Brinias Logo"/>
                 <h1 className="text-4xl md:text-6xl font-serif mt-10 text-[#f1f1f1]">Meals n' Sips</h1>
                 <p className="max-w-xl text-center text-[#f1f1f1] mt-5 font-serif">
                 "In the world of food and drinks, visuals are everything. A great picture doesn't just capture a dish or a drink—it sets the mood, sparks appetite, and elevates the experience. Whether through vibrant colors or intricate design, the right image can ignite the imagination, making you taste the flavors just by looking. It’s often said that the perfect dish begins by tasting with your eyes before you ever take a bite or sip."
@@ -68,7 +68,8 @@ const MealsnSips = () => {
                 <img
                     className="w-full h-auto cursor-pointer"
                     src={doc.url}
-                    alt={`Ecosystem Image ${doc.id + 1}`} 
+                    alt={`MealsnSips Image ${doc.id + 1}`}
+                    loading="lazy" 
                 />
               </div>
             );
