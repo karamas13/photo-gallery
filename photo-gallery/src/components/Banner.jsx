@@ -33,7 +33,7 @@ const Banner = () => {
             </div>
 
             <div className="flex flex-col justify-center items-center absolute left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg h-screen max-h-screen-lg px-4">
-                <img className="lg:w-[40rem] md:w-[30rem] mb-[7rem] w-auto h-auto" src={perspective} alt="Nikos Brinias Logo"/>
+                <img className="lg:w-[40rem] md:w-[30rem] mb-[7rem] w-auto h-auto" src={perspective} alt="Nikos Brinias Logo" loading="lazy"/>
             </div>
 
                <div className="w-screen h-screen flex items-end justify-center mt-5">
