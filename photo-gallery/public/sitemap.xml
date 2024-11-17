@@ -10,26 +10,32 @@
 <url>
   <loc>https://nikosbriniasphotography.com/</loc>
   <lastmod>2024-11-15</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://nikosbriniasphotography.com/HomePage</loc>
   <lastmod>2024-11-15</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://nikosbriniasphotography.com/Ecosystem</loc>
   <lastmod>2024-11-15</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://nikosbriniasphotography.com/Individuals</loc>
   <lastmod>2024-11-15</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://nikosbriniasphotography.com/MealsnShips</loc>
   <lastmod>2024-11-15</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://nikosbriniasphotography.com/Concerts</loc>
   <lastmod>2024-11-15</lastmod>
+  <priority>0.70</priority>
 </url>
 
 
