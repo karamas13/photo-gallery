@@ -8,8 +8,7 @@ function App() {
       <Helmet>
         <title>Nikos Brinias Photography - Welcome to Nikos Brinias Photography</title>
         <meta name="description" content="Discover stunning photography showcasing nature, individuals, meals, and concerts. Explore my work today!" />
-        <meta name="keywords" content="photography, nature, individuals, meals, concerts, landscapes, live shows, portraits, people, professional, drinks, drone, gallery, nikos, brinias" />
-        <meta property="og:image" content="./favicon.png" />       
+        <meta name="keywords" content="photography, nature, individuals, meals, concerts, landscapes, live shows, portraits, people, professional, drinks, drone, gallery, nikos, brinias, greece" />    
       </Helmet>
       <Banner />
     </>
