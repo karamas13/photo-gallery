@@ -16,7 +16,7 @@ const UploadForm = () => {
     const [selectedCategory, setSelectedCategory] = useState('Ecosystems');
     const { docs } = useFirestore(selectedCategory); // Use the selected category to fetch documents
 
-    const types = ['image/png', 'image/jpeg'];
+    const types = ['image/png', 'image/jpeg','image/avif' ];
 
     const changeHandler = (e) => {
         let selected = e.target.files[0];
