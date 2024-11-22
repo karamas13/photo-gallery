@@ -36,13 +36,9 @@ const Banner = () => {
                 <img className="lg:w-[40rem] md:w-[30rem] mb-[7rem] w-auto h-auto" src={perspective} alt="Nikos Brinias Logo" loading="lazy"/>
             </div>
 
-               <div className="w-screen h-screen flex items-end justify-center mt-5 ">
-                <div className="flex flex-col items-center justify-center w-full"> 
+               <div className="w-screen h-screen flex items-end justify-center mt-5">
+                <div className="flex flex-col items-center justify-center w-full mb-10"> 
                  <button onClick={() => {nav('/HomePage')}} class="mb-5 text-2xl rounded-lg text-black hover:before:bg-black relative h-[50px] w-40 overflow-hidden border border-white bg-white px-3 text-black-900 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-black before:transition-all before:duration-500 hover:text-white hover:shadow-white hover:before:left-0 hover:before:w-full"><span class="relative z-1">Explore</span></button>
-              
-
-                 
-                 <footer className=" mb-1 mx-auto text-white lg:w-[40%] w-full text-sm"><p className="m-5 text-center">A <span className="text-red-800">Web Experience</span> Designed and Developed by <a href="http://nickkaramaroudisdev.com" target="_blank" className="cursor-pointer">Nikos Karamaroudis</a></p></footer>
                  </div>
             </div>
 
