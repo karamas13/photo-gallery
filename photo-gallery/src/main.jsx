@@ -13,6 +13,9 @@ import SignIn from './pages/SignIn';
 import AuthContext from './Context/AuthContext';
 import Protected from './components/Protected';
 
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
+
 //Pages
  
 const router = createBrowserRouter( [
@@ -42,7 +45,11 @@ const router = createBrowserRouter( [
   },
   {
     path: '/UploadForm',
-    element: <Protected><UploadForm /></Protected>
+    element: 
+    <Protected>
+      <ToastContainer theme='dark'/>
+       <UploadForm />
+    </Protected>
   },
   {
     path: '/SignIn',

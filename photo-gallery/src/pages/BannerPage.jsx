@@ -11,6 +11,7 @@ function App() {
         <meta name="keywords" content="photography, nature, individuals, meals, concerts, landscapes, live shows, portraits, people, professional, drinks, drone, gallery, nikos, brinias, greece" />    
       </Helmet>
       <Banner />
+      
     </>
   );
 }

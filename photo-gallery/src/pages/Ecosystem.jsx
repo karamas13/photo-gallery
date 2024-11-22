@@ -77,7 +77,7 @@ const Ecosystem = () => {
             );
           })}
         </div>
-        <footer className="my-20 border-t-2 border-white mx-auto text-white lg:w-[40%] w-full"><p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by Nikos Karamaroudis</p></footer>
+        <footer className="my-20 border-t-2 border-white mx-auto text-white lg:w-[40%] w-full"><p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by <a href="http://nickkaramaroudisdev.com" target="_blank" className="underline cursor-pointer">Nikos Karamaroudis</a></p></footer>
       </div>
     </div>
   );

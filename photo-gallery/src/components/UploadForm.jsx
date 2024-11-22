@@ -8,6 +8,8 @@ import { doc, deleteDoc } from "firebase/firestore"; // Import Firestore delete 
 import useFirestore from "../hooks/useFirestore"; // Custom hook to retrieve documents
 import { projectFirestore } from "../firebase/config";
 
+import { toast } from "react-toastify";
+
 const UploadForm = () => {
     const [file, setFile] = useState(null);
     const [error, setError] = useState(null);
@@ -21,9 +23,11 @@ const UploadForm = () => {
         if (selected && types.includes(selected.type)) {
             setFile(selected);
             setError('');
+            toast.success("Image Uplaoded Successfully")
         } else {
             setFile(null);
             setError('Please select a valid file type (png or jpeg).');
+            toast.error(error.message);
         }
     }
 
@@ -33,6 +37,7 @@ const UploadForm = () => {
             // Delete from storage
             await deleteObject(photoRef);
             console.log("Photo deleted successfully");
+            toast.success("Photo Deleted Successfully")
 
             // Delete corresponding Firestore document
             const docRef = doc(projectFirestore, selectedCategory, docId); // Reference to the Firestore document using the selected category
@@ -43,6 +48,7 @@ const UploadForm = () => {
             // Implement local state update here if needed to reflect changes in the UI
         } catch (error) {
             console.error("Error deleting photo:", error);
+            toast.error(error.message);
         }
     };
 
