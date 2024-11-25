@@ -5,4 +5,6 @@ Disallow: /login/
 Disallow: /signin/
 Disallow: /uploadform/
 
+Allow: /favicon.ico
+
 Sitemap: https://nikosbriniasphotography.com/sitemap.xml
