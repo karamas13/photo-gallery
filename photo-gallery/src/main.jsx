@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { hydrateRoot, createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 import BannerPage from './pages/BannerPage';
@@ -14,52 +14,80 @@ import AuthContext from './Context/AuthContext';
 import Protected from './components/Protected';
 
 import { ToastContainer } from 'react-toastify';
+
 import "react-toastify/dist/ReactToastify.css"
 
+
+
 //Pages
+
  
+
 const router = createBrowserRouter( [
+
   {
     path: '/',
     element: <BannerPage  />
   },
+
   {
     path: '/HomePage',
     element: <HomePage />
   },
+
   {
     path: '/Ecosystem',
     element: <Ecosystem />
   },
+
   {
     path: '/Concerts',
     element: <Concerts />
   },
+
   {
     path: '/MealsnShips',
     element: <MealsnShips />
   },
+
   {
     path: '/Individuals',
     element: <Individuals />
   },
+
   {
     path: '/UploadForm',
-    element: 
+    element:
     <Protected>
+
       <ToastContainer theme='dark'/>
+
        <UploadForm />
+
     </Protected>
+
   },
+
   {
     path: '/SignIn',
     element: <SignIn />
   },
 
+
+
 ] );
 
-createRoot(document.getElementById('root')).render(
-   <AuthContext> 
-    <RouterProvider   router={router} />
-   </AuthContext>
-)
+
+
+const container = document.getElementById('root');
+const rootElement = (
+  <AuthContext> 
+    <RouterProvider router={router} />
+  </AuthContext>
+);
+
+if (container.hasChildNodes()) {
+  hydrateRoot(container, rootElement);
+} else {
+  createRoot(container).render(rootElement);
+}

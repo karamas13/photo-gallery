@@ -20,13 +20,8 @@ const Banner = () => {
         '/images/Banner_ 10.avif',
     ];
 
-    return (
-     <> 
-      <Helmet>
-        <title>Nikos Brinias Photography - Welcome to Nikos Brinias Photography</title>
-        <meta name="description" content="Discover stunning photography showcasing nature, individuals, meals, and concerts. Explore my work today!" />
-        <meta name="keywords" content="photography, nature, individuals, meals, concerts, landscapes, live shows, portraits, people, professional, drinks, drone, gallery, nikos, brinias, greece" />    
-      </Helmet>
+    return ( 
+      
         
         <div className="banner relative w-full h-screen text-center overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-50 via-stone-900 to-stone-950 bg-cover bg-center">
             <div
@@ -35,7 +30,7 @@ const Banner = () => {
             >
                 {images.map((src, index) => (
                     <div className="item absolute inset-0 z-0" style={{ '--position': index + 1 }} key={index}>
-                        <img src={src} alt={`Banner ${index + 1}`} className="w-full h-full object-cover" />
+                        <img src={src} alt={"Professional photography showcase by Nikos Brinias"} className="w-full h-full object-cover" />
                     </div>
                 ))}
             </div>
@@ -53,7 +48,6 @@ const Banner = () => {
             
             </div>
 
-     </>
     );
 };
 

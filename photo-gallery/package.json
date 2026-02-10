@@ -7,8 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "react-snap"
   },
+  "reactSnap": {
+    "include": [
+    "/",
+    "/HomePage",
+    "/Ecosystem",
+    "/Concerts",
+    "/MealsnShips",
+    "/Individuals"
+  ],
+  "skipThirdPartyRequests": true
+},
   "dependencies": {
     "dotenv": "^16.4.5",
     "firebase": "^11.0.1",
@@ -31,6 +43,7 @@
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
+    "react-snap": "^1.23.0",
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.13",
     "tailwindcss-bg-patterns": "^0.3.0",
