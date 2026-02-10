@@ -2,24 +2,32 @@ import React from 'react';
 import './styles.css'; 
 import { useNavigate } from 'react-router';
 import perspective from '/images/perspective.avif';
+import { Helmet } from 'react-helmet';
 
 const Banner = () => {
     const nav = useNavigate();
 
     const images = [
-        '/images/dragon_ 1.avif',
-        '/images/dragon_ 2.avif',
-        '/images/dragon_ 3.avif',
-        '/images/dragon_ 4.avif',
-        '/images/dragon_ 5.avif',
-        '/images/dragon_ 6.avif',
-        '/images/dragon_ 7.avif',
-        '/images/dragon_ 8.avif',
-        '/images/dragon_ 9.avif',
-        '/images/dragon_ 10.avif',
+        '/images/Banner_ 1.avif',
+        '/images/Banner_ 2.avif',
+        '/images/Banner_ 3.avif',
+        '/images/Banner_ 4.avif',
+        '/images/Banner_ 5.avif',
+        '/images/Banner_ 6.avif',
+        '/images/Banner_ 7.avif',
+        '/images/Banner_ 8.avif',
+        '/images/Banner_ 9.avif',
+        '/images/Banner_ 10.avif',
     ];
 
     return (
+     <> 
+      <Helmet>
+        <title>Nikos Brinias Photography - Welcome to Nikos Brinias Photography</title>
+        <meta name="description" content="Discover stunning photography showcasing nature, individuals, meals, and concerts. Explore my work today!" />
+        <meta name="keywords" content="photography, nature, individuals, meals, concerts, landscapes, live shows, portraits, people, professional, drinks, drone, gallery, nikos, brinias, greece" />    
+      </Helmet>
+        
         <div className="banner relative w-full h-screen text-center overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-50 via-stone-900 to-stone-950 bg-cover bg-center">
             <div
                 className="slider absolute top-10 left-1/2 transform -translate-x-1/2"
@@ -27,7 +35,7 @@ const Banner = () => {
             >
                 {images.map((src, index) => (
                     <div className="item absolute inset-0 z-0" style={{ '--position': index + 1 }} key={index}>
-                        <img src={src} alt={`Dragon ${index + 1}`} className="w-full h-full object-cover" />
+                        <img src={src} alt={`Banner ${index + 1}`} className="w-full h-full object-cover" />
                     </div>
                 ))}
             </div>
@@ -44,6 +52,8 @@ const Banner = () => {
 
             
             </div>
+
+     </>
     );
 };
 

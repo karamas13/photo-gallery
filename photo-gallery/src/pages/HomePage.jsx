@@ -135,7 +135,7 @@ function HomePage() {
             <div className="flex flex-col h-full items-end justify-end w-screen">
               <img className="h-[25rem] md:h-[35rem] object-cover mx-auto" src={portrait} alt="Portrait of Nikos Brinias" />
               <footer className="m-10 mt-20 border-t-2 border-white mx-auto text-white">
-                <p className="m-5 text-center">© 2024 NikosBrinias-photography.com All rights reserved | Designed and Developed by <a href="http://nickkaramaroudisdev.com" target="_blank" className="underline cursor-pointer">Nikos Karamaroudis</a></p>
+                <p className="m-5 text-center">© 2026 NikosBrinias-photography.com All rights reserved | Designed and Developed by <a href="http://nickkaramaroudisdev.com" target="_blank" className="underline cursor-pointer">Nikos Karamaroudis</a></p>
               </footer>
             </div>
           </div>
