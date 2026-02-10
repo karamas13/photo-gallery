@@ -19,6 +19,7 @@
     "/MealsnShips",
     "/Individuals"
   ],
+  "exclude": ["/UploadForm, SignIn"], 
   "skipThirdPartyRequests": true,
    "source": "dist"
 },
