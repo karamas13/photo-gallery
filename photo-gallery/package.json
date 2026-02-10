@@ -19,7 +19,8 @@
     "/MealsnShips",
     "/Individuals"
   ],
-  "skipThirdPartyRequests": true
+  "skipThirdPartyRequests": true,
+   "source": "dist"
 },
   "dependencies": {
     "dotenv": "^16.4.5",
